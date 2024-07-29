@@ -22,7 +22,9 @@ body {
 /* shared css */
 .nav-container,
 .nav-link,
-.teams-section {
+.teams-section,
+.love-year,
+.fact-flex-container {
   display: flex;
 }
 
@@ -46,7 +48,11 @@ body {
 
 .nav-container,
 .banner-section,
-.teams-section {
+.teams-section,
+.love-year,
+.fact-container,
+.sponspor-container
+{
   max-width: 1140px;
   margin: 0 auto;
 }
@@ -141,17 +147,175 @@ body {
   margin: 1rem 0rem;
 }
 
+/* love year section year */
+.love-year {
+  margin-top: 100px;
+  gap: 50px;
+}
+.love-year-content h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  padding-left: 20px;
+  border-left: 5px solid rgb(255, 144, 14);
+}
 
+.love-year-content > p {
+  color: var(--paragraph-color);
+  line-height: 26px;
+  font-weight: 500;
+  margin: 20px 0px;
+}
+
+.flex-div {
+  border-radius: 8px;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+  background: rgb(255, 255, 255);
+  padding: 25px;
+  margin-bottom: 15px;
+}
+
+.flex-div h3 {
+  color: var(--heading-color);
+  font-size: 1.2rem;
+}
+
+.flex-div p {
+  color: var(--paragraph-color);
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.love-year-img{
+    position: relative;
+}
+
+.love-img-div img {
+  max-width: 560px;
+}
+
+.love-img img {
+  width: 100%;
+}
+
+.love-img-content {
+  border-radius: 8px;
+  background: rgb(255, 144, 14);
+  color: #fff;
+  display: inline-block;
+  padding: 45px 40px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: -40px;
+}
+
+.love-img-content h4{
+    font-size: 3rem;
+}
+
+.love-img-content p{
+    font-size: 1.2rem;
+}
+
+/* fact container css  */
+.fact-container {
+    margin-top: 80px;
+}
+
+.fact-container h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.fact-container p{
+    color: var(--paragraph-color);
+    line-height: 26px;
+}
+
+.fact-flex-container {
+    margin-top: 80px;
+    justify-content: space-around;
+}
+
+.fact-flex {
+    border: 2px solid rgb(255, 144, 14);
+    border-radius: 8px;
+    padding: 40px 30px;
+    text-align: center;
+    margin: 15px 0px;
+}
+
+.fact-flex h3 {
+    color: var(--heading-color);
+    font-size: 2rem;
+    margin: 5px 0;
+}
+
+.sponspor-container {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.sponspor-container h2{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.sponspor-container p{
+    line-height: 26px;
+    color: var(--paragraph-color);
+    margin: 10px 0;
+}
+
+.sponspor-img{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.sponspor-img img{
+    width: 130px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+/* footer section area  */
+.footer-container {
+    margin: 80px 0px;
+    text-align: center;
+    background-color: var(--bg-color);
+}
+
+.footer-container p{
+    padding: 40px;
+    color: var(--header-color);
+    font-size: 1.2rem;
+}
 
 /* media quiry for mobile responsive */
 @media screen and (max-width: 576px) {
   .nav-container,
   .nav-link,
-  .teams-section {
+  .teams-section,
+  .love-year,
+  .fact-flex-container,
+  .sponspor-img
+   {
     flex-direction: column;
   }
 
-  .team-img-container{
-    grid-template-columns: repeat(1,1fr);
+  .team-img-container {
+    grid-template-columns: repeat(1, 1fr);
   }
+
+  .love-img-content {
+    display: block;
+}
+
+.sponspor-img {
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
 }
